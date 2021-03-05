@@ -1,0 +1,74 @@
+{
+    "R": [{
+            "id": "1",
+            "name": "Addie Wunsch",
+            "img": "http://lorempixel.com/640/480/nightlife",
+            "price": "price 1",
+            "description": "description 1"
+        },
+        {
+            "id": "2",
+            "name": "Mae Kohler",
+            "img": "http://lorempixel.com/640/480/fashion",
+            "price": "price 2",
+            "description": "description 2"
+        },
+        {
+            "id": "3",
+            "name": "Jacky Hackett",
+            "img": "http://lorempixel.com/640/480/fashion",
+            "price": "price 3",
+            "description": "description 3"
+        },
+        {
+            "id": "4",
+            "name": "Jaycee Schulist",
+            "img": "http://lorempixel.com/640/480/transport",
+            "price": "price 4",
+            "description": "description 4"
+        },
+        {
+            "id": "5",
+            "name": "Mrs. Miller Hane",
+            "img": "http://lorempixel.com/640/480/animals",
+            "price": "price 5",
+            "description": "description 5"
+        }
+    ],
+    "Room": [{
+            "id": "1",
+            "name": "Addie Wunsch",
+            "img": "http://lorempixel.com/640/480/nightlife",
+            "price": "price 1",
+            "description": "description 1"
+        },
+        {
+            "id": "2",
+            "name": "Mae Kohler",
+            "img": "http://lorempixel.com/640/480/fashion",
+            "price": "price 2",
+            "description": "description 2"
+        },
+        {
+            "id": "3",
+            "name": "Jacky Hackett",
+            "img": "http://lorempixel.com/640/480/fashion",
+            "price": "price 3",
+            "description": "description 3"
+        },
+        {
+            "id": "4",
+            "name": "Jaycee Schulist",
+            "img": "http://lorempixel.com/640/480/transport",
+            "price": "price 4",
+            "description": "description 4"
+        },
+        {
+            "id": "5",
+            "name": "Mrs. Miller Hane",
+            "img": "http://lorempixel.com/640/480/animals",
+            "price": "price 5",
+            "description": "description 5"
+        }
+    ]
+}

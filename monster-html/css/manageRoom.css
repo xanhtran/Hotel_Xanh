@@ -1,0 +1,12 @@
+#description {
+    vertical-align: baseline;
+}
+
+.text-container h1 {
+    text-align: center;
+}
+
+.table {
+    margin: 20px 0px;
+    color: black;
+}

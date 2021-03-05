@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/booking.css">
+</head>
+
+<body>
+    <div id="booking" class="tab-pane active">
+        <div class="product-tab">
+            <div class="frm-booking">
+                <form class="form-horizontal" id="frm-booking">
+                    <input type="hidden" name="id" value="4">
+                    <div class="container">
+                        <div class="headercom">
+                            <div class="header">
+
+
+                                <div class="form-group">
+                                    <h2>Thông tin khách sạn</h2>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ngày nhận phòng<span class="red">(*)</span></label>
+                                    <div class="col-xs-24 col-sm-20">
+                                        <div class="input-group">
+                                            <input id="dateIn" width="520" required/>
+                                            <script>
+                                                $('#dateIn').datepicker({
+                                                    uiLibrary: 'bootstrap4'
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ngày trả phòng<span class="red">(*)</span></label>
+                                    <div class="col-xs-24 col-sm-20">
+                                        <div class="input-group">
+                                            <input id="dateOut" width="520" required/>
+                                            <script>
+                                                $('#dateOut').datepicker({
+                                                    uiLibrary: 'bootstrap4'
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Số phòng đặt <span
+                                class="red">(*)</span></label>
+                                    <div class="col-xs-24 col-sm-20">
+                                        <input type="number" name="num_booking" class="form-control" id="num_booking" placeholder="">
+                                    </div>
+                                </div>
+
+
+                                <!-- <div class="form-group">
+                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Giá phòng<span class="red">(*)</span></label>
+                                    <div class="col-xs-24 col-sm-20">
+                                        <div class="input-group">
+                                            <h2>Danh sách đặt phòng</h2>
+                                            <table class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tên phòng</th>
+                                                        <th>Đơn giá</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Thành tiền</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="bill-table">
+                                                    <tr>
+                                                        <td colspan="8" class="empty">Chưa chọn phòng</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="form-group">
+                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Tổng số người lớn </label>
+                                    <div class="col-xs-24 col-sm-20">
+                                        <input type="number" name="num_adult" class="form-control" id="num_adult" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Tổng số trẻ em </label>
+                                    <div class="col-xs-24 col-sm-20">
+                                        <input type="number" name="num_child" class="form-control" id="num_child" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Hình thức thanh toán<span class="red">(*)</span></label>
+                                    <div class="col-xs-24 col-sm-20">
+                                        <select class="form-control required" name="tid">
+                                            <option value="7" selected="selected">Thanh toán bằng tiền mặt</option>
+                                            <option value="7" selected="selected">Thanh toán bằng chuyển khoản 
+                                                <p>  Số tài khoản: 0031003147925 (ngân hàng VietcomBank)</p> </option>
+                                            <option value="8" selected="selected">Thanh toán bằng thẻ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="consumer">
+                                <div class="form-group">
+                                    <h2>Thông tin của bạn</h2>
+                                </div>
+                                <div class="body">
+                                    <div class="form-group">
+                                        <label class="col-xs-8 col-sm-4  text-xs-lefttext-right">Giới tính <span
+                                    class="red">(*)</span></label>
+                                        <div class="col-xs-12 col-sm-20">
+                                            <label><input type="radio" value="1" name="gender"
+                                        checked="checked">Nam</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label><input type="radio" value="0" name="gender">Nữ</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Họ tên <span
+                                    class="red">(*)</span></label>
+                                        <div class="col-xs-24 col-sm-20">
+                                            <input type="text" name="fullname" class="form-control" id="fullname" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">CMND / Hộ chiếu <span
+                                    class="red">(*)</span></label>
+                                        <div class="col-xs-24 col-sm-20">
+                                            <input type="number" name="cmnd" class="form-control" id="cmnd" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Số điện thoại <span
+                                    class="red">(*)</span></label>
+                                        <div class="col-xs-24 col-sm-20">
+                                            <input type="number" name="phone" class="form-control" id="phone" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Email <span
+                                    class="red">(*)</span></label>
+                                        <div class="col-xs-24 col-sm-20">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Địa chỉ <span
+                                    class="red">(*)</span></label>
+                                        <div class="col-xs-24 col-sm-20">
+                                            <input type="text" name="address" class="form-control" id="address" placeholder="">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ghi chú</label>
+                                        <div class="col-xs-24 col-sm-20">
+                                            <textarea name="note" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="form-group">
+                                <button type="button" id="button" onclick="validate()">Gửi thông tin</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/booking.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+</html>

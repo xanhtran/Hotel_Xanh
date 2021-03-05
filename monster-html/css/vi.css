@@ -1,0 +1,17 @@
+#xacnhan {
+    margin-left: 350px;
+    width: 250px;
+    height: 50px;
+}
+
+input[type="text"] {
+    width: 25px;
+}
+
+thead {
+    background: rgb(243, 223, 223);
+}
+
+table {
+    border: 1px solid grey;
+}
